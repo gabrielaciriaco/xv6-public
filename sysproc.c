@@ -89,3 +89,12 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+// return the total system time
+// since start.
+int
+sys_time(void)
+{
+  return sysTimeAll;
+}
+
