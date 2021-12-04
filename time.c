@@ -32,9 +32,14 @@ int main(int argc, char *argv[])
   int userTime = realTime - sysTime;
 
   // print time
+  printf(stdout, "sys ");
   convertTime(sysTime);
-  convertTime(realTime);
+
+  printf(stdout,"user ");
   convertTime(userTime);
+
+  printf(stdout,"real ");
+  convertTime(realTime);
 
   exit();
 }
