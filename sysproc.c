@@ -95,6 +95,11 @@ sys_uptime(void)
 int
 sys_time(void)
 {
-  return sysTimeAll;
+  int current = sysTimeAll;
+
+  //resetting time to not impact other calls
+  sysTimeAll = 0;
+
+  return current;
 }
 

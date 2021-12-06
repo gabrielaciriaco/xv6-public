@@ -12,10 +12,13 @@ int main(int argc, char *argv[])
   int realTimeStart = uptime();
   // based on init.c
   int processId = fork();
+
+  time();
+  
   if (processId < 0)
   {
     printf(stdout, "time: error executing command\n");
-    exit();
+    exit(); 
   }
   else if (processId == 0)
   {
